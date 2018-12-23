@@ -4,20 +4,6 @@ const client = new Discord.Client();
 var prefix = "-";
 var dat = JSON.parse("{}");
 
-client.on("ready", () => {
-console.log("Hi Online")
-});
-client.on("ready", () => {
-  function lol() {
-    client.guilds.get('395147213065682956').roles.find("name", "Rainbow").setColor("RANDOM");
-  };
-  setInterval(lol, 1);
-});
-
-
-
-
-
 
 client.on('ready',  () => {
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
