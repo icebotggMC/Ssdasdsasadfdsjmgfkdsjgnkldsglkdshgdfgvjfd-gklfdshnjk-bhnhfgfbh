@@ -1,34 +1,40 @@
-const { Client, Util } = require('discord.js');
-const YouTube = require('simple-youtube-api');
-const ytdl = require('ytdl-core');
+const Discord = require('discord.js');
+const fs = require('fs');
+const client = new Discord.Client();
+var prefix = "-";
+var dat = JSON.parse("{}");
 
-const client = new Client({ disableEveryone: true });
-const GOOGLE_API_KEY = 'AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8';
-const youtube = new YouTube(GOOGLE_API_KEY);
+client.on("ready", () => {
+console.log("Hi Online")
+});
+client.on("ready", () => {
+  function lol() {
+    client.guilds.get('395147213065682956').roles.find("name", "Rainbow").setColor("RANDOM");
+  };
+  setInterval(lol, 1);
+});
 
-const queue = new Map();
-const PREFIX = '$';
-client.on('warn', console.warn);
 
-client.on('error', console.error);
 
-client.on('ready', () => { 
-console.log(`
-------------------------------------------------------
-> Logging in...
-------------------------------------------------------
-Logged in as ${client.user.tag}
-Working on ${client.guilds.size} servers!
-${client.channels.size} channels and ${client.users.size} users cached!
-I am logged in and ready to roll!
-LET'S GO!
-------------------------------------------------------
--------------------------------------------------------
-------------------------------------------------------
-----------------------Bot's logs----------------------`);
 
+
+
+client.on('ready',  () => {
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~Team sy bot~~~~~~~~~~~');
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+console.log(`Logged in as  * [ "  Team #Plus Bot " ] servers! [ " ${client.guilds.size} " ] Users! [ " ${client.users.size} " ]`); 
 
 });
+
+client.on('message', msg => {
+  if (msg.content === '-شغال bc') {
+    msg.reply('يب انا شغال');
+  }
+});
+
 
 client.on('ready', () => {
     console.log('Bot Is Ready Now !');
@@ -477,4 +483,155 @@ client.on('message', message => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+client.on('message', message => {
+    var prefix = "-"
+    if (message.content.toLowerCase() === prefix + "help") {
+        let embed = new Discord.RichEmbed()
+        .setColor("RANDOM")
+        .setTitle("اوامر المساعدة")
+        .addField("الامر",' ايش يسوي ')
+        .addField("الامر",' ايش يسوي ')
+        .addField("الامر",' ايش يسوي ')
+        .addField("الامر",' ايش يسوي ')
+        .addField("الامر",' ايش يسوي ')
+        .addField("الامر",' ايش يسوي ')
+        .addField("الامر",' ايش يسوي ')
+        .addField("الامر",' ايش يسوي ')
+        message.channel.sendEmbed(embed);
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 client.login(process.env.BOT_TOKEN);
